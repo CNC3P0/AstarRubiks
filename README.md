@@ -1,2 +1,9 @@
 # AstarRubiks
-This Python program solves a Rubik's Cube using the A* algorithm.
+This Python 3.5.2 program solves a Rubik's Cube using the A* algorithm.
+
+AstarRukiks.py is the main program.  
+Rcube.py contains required methods and must be in the same folder.
+
+NOTE: Due to the nature of the algorithm and the problem space, any
+      solution path of more than 9 rotations takes an excessive amount
+      of time to complete on a typical home computer.
