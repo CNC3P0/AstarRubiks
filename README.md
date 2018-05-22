@@ -1,5 +1,6 @@
 # AstarRubiks
-This Python 3.5.2 program solves a Rubik's Cube using the A* algorithm.
+This Python program finds the shortest solution path for a Rubik's Cube
+using the A* algorithm.
 
 AstarRubiks.py is the main program.  
 Rcube.py contains required methods and must be in the same folder.
