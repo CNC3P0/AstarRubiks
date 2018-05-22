@@ -16,7 +16,7 @@
 #               extractPath(visitedQ)
 
 # Due to the nature of the algorithm and the problem space, any solution path
-#   more than 9 rotations away takes an excessive amount of time to complete.
+#   more than 8 rotations away takes an excessive amount of time to complete.
 #   1 to 6 is almost instantaneous, 7 to 8 can be anywhere from a minute to
 #   several hours, and 9 can take hours to days. Anything 10 or over has not
 #   yet been tested for long enough to finish, so is unknown.
@@ -171,7 +171,7 @@ def main():
           'and hit enter.')
     print('Keep in mind that creating a solvable puzzle is tricky!')
     print('One mistake will probably make it unsolvable!')
-    selection = input('\nOr simply hit enter for a random cube.\n')
+    selection = input('\nOr simply hit enter for a random cube.')
 
     if selection.upper() != "CUBE":
         while True:
@@ -239,7 +239,7 @@ def main():
         
     # display list of rotations
     if scramblePath != []:
-        print('Random rotations):\n', scramblePath)
+        print('Random clockwise rotations as [\'side colour\', degrees]:\n', scramblePath)
 
     expandedQ.append(currentNode) # at start only first node has been discovered
 
@@ -280,7 +280,7 @@ def main():
     for i in range(0,len(solutionPath)):
         solutionPath[i][0] = Rcube.Side(solutionPath[i][0]).name
         solutionPath[i][1] = 90 * solutionPath[i][1]
-    print('Solution path (clockwise 1/4 rotations):\n', solutionPath)
+    print('Solution path as [\'side colour\', degrees]:\n', solutionPath)
 
     print('\nTime to complete was '+str(datetime.now()-starttime))
 
